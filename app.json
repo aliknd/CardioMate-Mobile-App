@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "STAND",
-    "slug": "STAND",
+    "name": "BanAware",
+    "slug": "BanAware",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./app/assets/icon.png",
@@ -9,14 +9,12 @@
     "splash": {
       "image": "./app/assets/splash.png",
       "resizeMode": "cover",
-      "backgroundColor": "#dbf1ee"
+      "backgroundColor": "#063852"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "plugins": [
       [
         "expo-image-picker",
@@ -26,21 +24,32 @@
       ]
     ],
     "ios": {
-      "supportsTablet": true
+      "config": {
+        "usesNonExemptEncryption": false
+      },
+      "supportsTablet": true,
+      "bundleIdentifier": "com.alikargarandehkordi.banaware",
+      "buildNumber": "1.0.5",
+      "infoPlist": {
+        "UIBackgroundModes": ["fetch"]
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./app/assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.alikargarandehkordi.stand",
+      "package": "com.alikargarandehkordi.banaware",
       "versionCode": 1,
       "permissions": [
         "android.permission.CAMERA",
         "android.permission.READ_EXTERNAL_STORAGE",
         "android.permission.WRITE_EXTERNAL_STORAGE",
         "android.permission.ACCESS_MEDIA_LOCATION",
-        "android.permission.RECORD_AUDIO"
+        "android.permission.RECORD_AUDIO",
+        "android.permission.FOREGROUND_SERVICE",
+        "ACCESS_NETWORK_STATE",
+        "WAKE_LOCK"
       ]
     },
     "web": {

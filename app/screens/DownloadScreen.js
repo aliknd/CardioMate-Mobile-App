@@ -5,23 +5,23 @@ import AppButton from "../components/AppButton";
 import Screen from "../components/Screen";
 import colors from "../config/colors";
 import AppText from "../components/AppText";
+import useAuth from "../auth/useAuth";
 
 function DownloadScreen(props) {
+  const { user } = useAuth();
   return (
     <Screen style={styles.container}>
-      <Image style={styles.logo} source={require("../assets/uhmlogo.jpg")} />
+      <Image style={styles.logo} source={require("../assets/sync.png")} />
       <AppText style={styles.explanation}>
-        There is no right or wrong way to feel during unprecedented times. Allow
-        yourself to experience the emotions, but remind yourself that this is
-        not forever. University of Hawai'i at Manoa has prepared a comprehensive
-        guideline to help the patients dealing with mental issues. You can now
-        download it from the link bellow!
+        To synchronize data between the EMA application and FitBit data, please
+        click on the provided link. This link will guide you to the server for
+        configuring data integration with the FitBit server.
       </AppText>
       <AppButton
-        title="Download"
+        title="FitBit Connection"
         onPress={() =>
           Linking.openURL(
-            "https://research.hawaii.edu/orc/wp-content/uploads/sites/7/2021/12/mental-health-and-suicide-crisis.pdf"
+            "https://fitbitcollector.slades.dev?study_id=" + user.userId
           )
         }
       />
@@ -32,18 +32,16 @@ function DownloadScreen(props) {
 const styles = StyleSheet.create({
   container: {
     padding: 10,
-    backgroundColor: colors.lightGreen,
   },
   logo: {
-    width: "100%",
-    height: 130,
     alignSelf: "center",
     marginTop: 5,
     marginBottom: 15,
     borderRadius: 20,
   },
   explanation: {
-    backgroundColor: colors.darkGreen,
+    backgroundColor: colors.secondary,
+    color: colors.white,
     padding: 15,
     marginBottom: 10,
     borderRadius: 20,
