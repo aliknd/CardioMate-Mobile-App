@@ -55,10 +55,10 @@
     "web": {
       "favicon": "./app/assets/favicon.png"
     },
-    "description": "An EMA App to screen the stress and anxiety!",
+    "description": "An EMA App to log user's conditions!",
     "extra": {
       "eas": {
-        "projectId": "b7e7417c-cc85-4110-8307-1335ede2aabb"
+        "projectId": "670c8238-1b65-403d-8383-66e6dea959d1"
       }
     }
   }
