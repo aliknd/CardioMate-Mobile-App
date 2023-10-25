@@ -2,6 +2,8 @@
   "expo": {
     "name": "BanAware",
     "slug": "BanAware",
+    "scheme": "myapp",
+    "privacy": "unlisted",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./app/assets/icon.png",
@@ -29,10 +31,7 @@
       },
       "supportsTablet": true,
       "bundleIdentifier": "com.alikargarandehkordi.banaware",
-      "buildNumber": "1.0.5",
-      "infoPlist": {
-        "UIBackgroundModes": ["fetch"]
-      }
+      "buildNumber": "1.0.9"
     },
     "android": {
       "adaptiveIcon": {
@@ -49,13 +48,19 @@
         "android.permission.RECORD_AUDIO",
         "android.permission.FOREGROUND_SERVICE",
         "ACCESS_NETWORK_STATE",
-        "WAKE_LOCK"
+        "WAKE_LOCK",
+        "NOTIFICATIONS",
+        "USER_FACING_NOTIFICATIONS",
+        "INTERNET"
       ]
     },
     "web": {
       "favicon": "./app/assets/favicon.png"
     },
     "description": "An EMA App to log user's conditions!",
+    "notification": {
+      "iosDisplayInForeground": true
+    },
     "extra": {
       "eas": {
         "projectId": "670c8238-1b65-403d-8383-66e6dea959d1"

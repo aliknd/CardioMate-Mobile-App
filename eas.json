@@ -10,7 +10,7 @@
     "preview": {
       "distribution": "internal",
       "ios": {
-        "resourceClass": "m1-medium",
+        "resourceClass": "m-medium",
         "enterpriseProvisioning": "adhoc"
       },
       "android": {
@@ -32,11 +32,17 @@
     },
     "production": {
       "ios": {
-        "resourceClass": "m1-medium"
+        "resourceClass": "m-medium"
       }
     }
   },
   "submit": {
-    "production": {}
+    "production": {
+      "ios": {
+        "appleId": "alkarg@utu.fi",
+        "ascAppId": "6465079876",
+        "appleTeamId": "B8Y298FMLQ"
+      }
+    }
   }
 }
