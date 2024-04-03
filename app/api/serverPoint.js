@@ -1,3 +1,3 @@
-//const endpointURL = "https://banaware.hawaiidigitalhealthlab.com/api";
-const endpointURL = "http://192.168.86.30:9000/api";
+const endpointURL = "https://cardiomate.hawaiidigitalhealthlab.com/api";
+//const endpointURL = "http://3.227.70.118:6500/api";
 export default endpointURL;
